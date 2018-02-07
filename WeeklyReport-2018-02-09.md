@@ -5,11 +5,11 @@
 ###### 在观察者模式中，观察者需要直接订阅目标事件；在目标发出内容改变的事件后，直接接收事件并作出响应
 
 ```
- ╭─────────────╮  Fire Event ╭──────────────╮
- │             │────────────>│              │
- │   Subject   │             │   Observer   │
- │             │<────────────│              │
- ╰─────────────╯  Subscribe  ╰──────────────╯
+ ╭─────────────╮  Fire Event  ╭──────────────╮
+ │             │─────────────>│              │
+ │   Subject   │              │   Observer   │
+ │             │<─────────────│              │
+ ╰─────────────╯  Subscribe   ╰──────────────╯
 ```
 
 ###### 在发布订阅模式中，发布者和订阅者之间多了一个发布通道；一方面从发布者接收事件，另一方面向订阅者发布事件；订阅者需要从事件通道订阅事件
@@ -125,6 +125,11 @@ DataHub.prototype.notify = function(url, callback) {
 定义 DownloadManager 类作为事件通道
 
 ```
+function DownloadManager() {
+  this.events = {};
+  this.uId = -1;
+}
+
 DownloadManager.prototype.publish = function(eventType, url) {
   if (!this.events[eventType]) {
     return false;
