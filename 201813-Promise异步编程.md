@@ -17,32 +17,6 @@
 
 回调本身没有问题，但如果流程复杂，一环套一环，层层嵌套，会令代码变得难以阅读，难以维护。这就是 [callback hell](http://callbackhell.com/)：
 
-```
-fs.readdir(source, function (err, files) {
-  if (err) {
-    console.log('Error finding files: ' + err);
-  } else {
-    files.forEach(function (filename, fileIndex) {
-      console.log(filename);
-      gm(source + filename).size(function (err, values) {
-        if (err) {
-          console.log('Error identifying file size: ' + err);
-        } else {
-          console.log(filename + ' : ' + values);
-          aspect = (values.width / values.height);
-          widths.forEach(function (width, widthIndex) {
-            height = Math.round(width / aspect);
-            console.log('resizing ' + filename + 'to ' + height + 'x' + height);
-            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
-              if (err) console.log('Error writing file: ' + err);
-            });
-          }.bind(this));
-        }
-      });
-    });
-  }
-});
-```
 callback hell 正是 Promise 要解决的问题。
 
 #### 使用 Promise
