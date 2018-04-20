@@ -230,6 +230,9 @@ async function buildTable() {
 return Promise.reject(new Error())
 ```
 
+#### 在线演示
+[TryAsyncAwait](https://codepen.io/PennyOrAmy/full/qYdNEM)  
+
 #### 参考资料
 [JavaScript Promise：简介](https://developers.google.com/web/fundamentals/primers/promises)   
 [Generator 函数的含义与用法](http://www.ruanyifeng.com/blog/2015/04/generator.html)    
