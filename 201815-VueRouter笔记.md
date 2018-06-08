@@ -8,9 +8,10 @@
 6. 可以用 name 为某个路由设置名称，可以是中文。
 7. 同级可以有多个 router view，以 name 区分，没定义 name 的默认为 default。
 8. 重定向可以指定某个 router 指向另一个 router，例如将空白 router '/'指向 homepage。
-9. 别名可以让某个 router 有另一个访问方式，例如给嵌套关系复杂的路由一个简洁的地址。
-10. 路由组件可用 props 传参：传 true 标示接收 $route.params 为参数；传对象就接受这个对象为参数；传 function 则接收返回的对象为参数，可以在 function 中包装想要的参数。
-11. router 的 History 可以让 URL 中不再有 #，需要在服务端配置匹配不到的 URL 返回 app 依赖的 html 页面（在 router 中处理 404 的情况），另外还需要浏览器支持 HTML5 History API。
+9. 别名可以让某个 router 有另一个访问方式，例如给嵌套关系复杂的路由一个简洁的地址。      
+10. 如果想让父路由展示点内容，可以定义一个空的子路由来做这件事情。
+11. 路由组件可用 props 传参：传 true 标示接收 $route.params 为参数；传对象就接受这个对象为参数；传 function 则接收返回的对象为参数，可以在 function 中包装想要的参数。
+12. router 的 History 可以让 URL 中不再有 #，需要在服务端配置匹配不到的 URL 返回 app 依赖的 html 页面（在 router 中处理 404 的情况），另外还需要浏览器支持 HTML5 History API。
 
 #### 导航解析流程
 
