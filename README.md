@@ -1,2 +1,1 @@
-# Weekly Report
-Report weekly 
+# Learning Report
