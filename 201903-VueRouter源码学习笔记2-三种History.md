@@ -21,12 +21,12 @@ HTML5History 中，侦听 popstate 事件。
 
 #### window 的 popstate 事件
 MDN：
-> 调用history.pushState()或者history.replaceState()不会触发popstate事件。   
-popstate事件只会在浏览器某些行为下触发, 比如点击后退、前进按钮(或者在JavaScript中调用history.back()、history.forward()、history.go()方法)。
+> 调用 history.pushState() 或者 history.replaceState() 不会触发 popstate 事件。   
+popstate 事件只会在浏览器某些行为下触发, 比如点击后退、前进按钮（或者在 JavaScript 中调用 history.back()、history.forward()、history.go()  方法）。
 
 #### window 的 hashchange 事件
 MDN：
-> 当 一个窗口的 hash （URL 中 # 后面的部分）改变时就会触发 hashchange 事件（参见 location.hash）。
+> 当一个窗口的 hash（URL 中 # 后面的部分）改变时就会触发 hashchange 事件（参见 location.hash）。
 
 
 #### 下一步
