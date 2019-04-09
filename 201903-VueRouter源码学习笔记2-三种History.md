@@ -30,4 +30,4 @@ MDN：
 
 
 #### 下一步
-popstate 或 hashchange 被触发之后，到底发生了什么，需要去了解 history/base.js 中的 transitionTo。
+popstate 或 hashchange 被触发时，push 或 replace 时，到底发生了什么，需要去了解 history/base.js 中的 transitionTo。
