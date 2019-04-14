@@ -6,7 +6,7 @@
 
 
 #### 主要文件功能及关系概览
-从 index.js 入手，梳理功能，顺藤摸瓜，整理出目录中主要文件（除 utils 外）的功能以及它们之间的关联。得到了下面的这张图：  
+从 index.js 入手，梳理功能，整理出目录中主要文件（除 utils 外）的功能以及它们之间的关联。得到了下面的这张图：  
 ![image](https://github.com/PennyOrAmy/LearningReport/blob/master/images/vur-router-files.png)
 
 #### 下一步
